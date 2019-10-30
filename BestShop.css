@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Open Sans', sans-serif;
+}
+
+.header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.container {
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0 3px 6px #00000029;
+
+}
+
+.header .container{
+    justify-content: space-around;
+    align-items: center;
+}
+.container p{
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #08A6E4;
+    opacity: 1;
+    justify-content: left;
+
+}
+.header_list{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3.28px;
+}
+
+.header__link{
+    display: flex;
+    align-items: center;
+    color: #A5A5A5;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.header__link:hover{
+    color: black;
+    border-bottom: 4px solid #08A6E4;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;;
+}
+.second_section{
+    background-image: url("./assets/Background.png");
+    background-position: center bottom;
+    background-size: cover;
+    height: 712px;
+    margin-top: 200px;
+}
+
+.second_section_content{
+    text-align: center;
+}
+.second_section_content h1{
+    text-align: center;
+    font-size: 57px;
+    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+    margin-bottom: 20px;
+
+}
+
+.second_section_content p{
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 38px;
+
+}
+
+.btn_second_section {
+    box-shadow: 5px 10px 14px #07ACE629;
+    border-radius: 40px;
+    background-color: #08A6E4;
+    padding: 15px 30px;
+    opacity: 1;
+    text-align: center;
+    font-weight: Bold;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 22px;
+    margin-top: 20px;
+}
+
+.third_section{
+    width: 531px;
+    height: 1627px;
+    background-color: #FFFFFF;
+}
+.column{
+    display: flex;
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 350px;
+    border: 2px solid black;
+}
+
+#clear{
+    clear: both;
+}
