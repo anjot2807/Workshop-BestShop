@@ -10,6 +10,6 @@ gulp.task('dzien2', function (done) {
     done();
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', function() {
     gulp.watch('scss/*.scss', gulp.series("sass"));
 });
