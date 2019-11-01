@@ -65,23 +65,24 @@
     </div>
 </section>
 <section class="fourth_section">
-    <div class="fourth_section_Row1">
-        <div class=text_container">
-            <h2 class="row1">Be always first </h2>
-            <p class="text-row1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam.</p>
+    <div class="fourth_section_container">
+        <div class="fourth_section_Row1">
+            <div class=text_container">
+                <h2 class="row1">Be always first </h2>
+                <p class="text-row1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            <div class="img_container">
+                <img class="img_mcbook" src="assets/Macbook.png" alt="mcbook"/>
+                <div class="square"></div>
+            </div>
         </div>
-        <div class="img_container">
-            <img class="img_mcbook" src="assets/Macbook.png" alt="mcbook"/>
-            <div class="square"></div>
-        </div>
-    </div>
-    <div class="fourth_section_Row2">
-        <div class="img_container2">
-            <img class="img_iphone" src="assets/iPhone.png" alt="iphone"/>
-            <div class="bigCircle"></div>
-        </div>
+        <div class="fourth_section_Row2">
+            <div class="img_container2">
+                <img class="img_iphone" src="assets/iPhone.png" alt="iphone"/>
+                <div class="bigCircle"></div>
+            </div>
             <div class="text_container2">
                 <h2 class="h2-row2">Your shop is<br> where you are! </h2>
                 <p class="text-row2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -89,36 +90,170 @@
                     magna aliqua. Ut enim ad minim veniam.</p>
             </div>
 
-    </div>
-    <div class="fourth_section_Row3">
-        <div class="text_container3">
-            <h2 class="h2-row3">Increase recognition <br> your brand! </h2>
-            <p class="text-row3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam.</p>
         </div>
-        <div class="img_container3">
-            <img class="img_trumpet" src="assets/Trumpet.png" alt="trumpet"/>
+        <div class="fourth_section_Row3">
+            <div class="text_container3">
+                <h2 class="h2-row3">Increase recognition <br> your brand! </h2>
+                <p class="text-row3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            <div class="img_container3">
+                <img class="img_trumpet" src="assets/Trumpet.png" alt="trumpet"/>
+            </div>
+
         </div>
-
     </div>
-
 </section>
 <section class="fifth_section">
     <div class="fifth_section_content">
         <h2> Pricing</h2>
-        <div class ="fifth_section_columns">
-            <div class="fifth_section_col"></div>
-            <div class="fifth_section_col"></div>
-            <div class="fifth_section_col"></div>
+        <div class="fifth_section_columns">
+            <div class="fifth_section_col">
+                <h3 class="basic"> Basic </h3>
+                <h3 class="basicPrice"> $0 </h3>
+                <ul>
+                    <li class="checked"> 100 MB HDD</li>
+                    <li class="checked"> 1 Subdomain</li>
+                    <li class="checked"> 2 E-mails</li>
+                    <li class="unchecked"> Two years license</li>
+                    <li class="unchecked"> Full support</li>
+                </ul>
+                <a href="#calculator" class="btn_begin_col_red" id="btn_basic">Begin</a>
+            </div>
+            <div class="fifth_section_col">
+                <h3 class="basic"> Professional </h3>
+                <h3 class="professionalPrice"> $25 </h3>
+                <span>Limited offer</span>
+                <ul>
+                    <li class="checked"> 500 MB HDD</li>
+                    <li class="checked"> 2 Subdomains</li>
+                    <li class="checked"> 5 E-mails</li>
+                    <li class="checked"> One year license</li>
+                    <li class="unchecked"> Full support</li>
+                </ul>
+                <a href="#calculator" class="btn_begin_col_blue" id="btn_professional">Begin</a>
+            </div>
 
+            <div class="fifth_section_col">
+                <h3 class="basic"> Premium </h3>
+                <h3 class="premiumPrice"> $60 </h3>
+                <span>Limited offer</span>
+                <ul>
+                    <li class="checked"> 2 GB HDD</li>
+                    <li class="checked"> 5 Subdomain</li>
+                    <li class="checked"> 20 E-mails</li>
+                    <li class="checked"> Two years license</li>
+                    <li class="checked"> Full support</li>
+                </ul>
+                <a href="#calculator" class="btn_begin_col_green" id="btn_premium">Begin</a>
+            </div>
         </div>
-
     </div>
-
-
-
 </section>
 
+<section class="calculator" id="calculator">
+    <div class="calc_container">
+        <h2 class="calc_title">Calculate how much you’ll pay</h2>
+        <div class="calc_box">
+            <form class="calc_form">
+                <input type="number" class="box_form" placeholder="Products quantity" id="products_quantity">
+                <input type="number" class="box_form" placeholder="Estimated orders in month" id="estimated_orders">
+                <input class="box_form" id="package_options">
+                <div class="choose_package" id="choose_package">Choose package</div>
+
+                <i class="arrow" id="arrow"></i>
+                <div class="options_visible" id="options_visible">
+                    <ul>
+                        <li id="basic">Basic</li>
+                        <li id="professional">Professional</li>
+                        <li id="premium">Premium</li>
+                    </ul>
+                </div>
+                <div class="labels">
+                    <label for="accounting">
+                        <input id="accounting" type="checkbox" class="checkbox_mark" checked>Accounting</label>
+                    <label for="rental">
+                        <input id="rental" type="checkbox" class="checkbox_mark" checked>Rental of a payment
+                        terminal</label>
+                </div>
+            </form>
+            <div class="calc_result">
+                <div class="row_result">
+                    <div class="row_title">Products</div>
+                    <div class="row_calculator" id="calc_products"></div>
+                    <div class="row_sum" id="products_sum">$0</div>
+                </div>
+                <div class="row_result">
+                    <div class="row_title">Orders</div>
+                    <div class="row_calculator" id="calc_orders"></div>
+                    <div class="row_sum" id="orders_sum">$0</div>
+                </div>
+                <div class="row_result">
+                    <div class="row_title">Package</div>
+                    <div class="row_calculator" id="package_type"></div>
+                    <div class="row_sum" id="package_sum">$0</div>
+                </div>
+                <div class="row_result">
+                    <div class="row_title">Accounting</div>
+                    <div class="row_sum" id="accounting_sum">$35</div>
+                </div>
+                <div class="row_result">
+                    <div class="row_title">Terminal</div>
+                    <div class="row_sum" id="terminal_sum">$5</div>
+                </div>
+                <div class="result_sum">
+                    <div class="row_title">Total</div>
+                    <div class="row_sum_total" id="total_sum">$40</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="sixth_section">
+
+    <div class="contact">
+        <h2 class="questions">Any questions?</h2>
+        <p class="contact_text">Leave your email address or call us!</p>
+        <div class="contact_icons">
+            <p class="contact_icon">info@bestshop.xyz</p>
+            <p class="contact_icon">123 456 789</p>
+        </div>
+    </div>
+    <form class="question_form" method="get">
+        <label class="form_label" for="name">NAME</label>
+        <input type="text" class="form_input" id="name" name="name" required>
+        <label class="form_label" for="email">EMAIL</label>
+        <input type="email" class="form_input" id="email" name="email" required>
+        <label class="form_checkbox">
+            <input type="checkbox" name="agreement" checked required>
+            <p>I hereby give consent for my personal data included in my application to be processed for the purposes of
+                the
+                recruitment process under the European Parliament’s and Council of the European Union Regulation on the
+                Protection
+                of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free
+                movement of
+                such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
+        </label>
+        <button class="btn_send" type="submit">Send</button>
+    </form>
+</section>
+
+
+<footer class="footer">
+    <div class="footer_container">
+        <div class="footer_bar">
+            <a href="#" class="footer_logo">BestShop</a>
+            <p class="footer_text">© 2019 BestShop LTD, All Rights Reserved</p>
+        </div>
+        <div class="footer_icons">
+            <a href="https://www.twitter.com" class="footer_icon icon_twitter"></a>
+            <a href="https://www.facebook.com" class="footer_icon icon_facebook"></a>
+        </div>
+    </div>
+</footer>
+<script src="js/app.js"></script>
 </body>
 </html>
