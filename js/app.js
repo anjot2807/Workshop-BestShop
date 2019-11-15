@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Loaded");
 
+
+
     const products_quantity = document.getElementById("products_quantity");
     const estimated_orders = document.getElementById("estimated_orders");
-    const package_options = document.getElementById("package_options");
-
+    const box_form = document.getElementById("options_visible");
 
     const choose_package = document.getElementById("choose_package");
 
@@ -40,59 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let sum_4 = 35;
     let sum_5 = 5;
 
-//calculation
-    products_quantity.addEventListener("click", function () {
-        calc_products.innerText = `${this.value} * $0.5`;
-        products_sum.innerText = `$${(this.value * 0.5)}`;
-        sum_1 = (this.value * 0.5);
-        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-    });
-    products_quantity.addEventListener("keyup", function () {
-        calc_products.innerText = `${this.value} * $0.5`;
-        products_sum.innerText = `$${(this.value * 0.5)}`;
-        sum_1 = (this.value * 0.5);
-        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-    });
+//events
 
-
-    estimated_orders.addEventListener("click", function () {
-        calc_orders.innerText = `${this.value} * $0.25`;
-        orders_sum.innerText = `$${(this.value * 0.25)}`;
-        sum_2 = (this.value * 0.25);
-        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-    });
-    estimated_orders.addEventListener("keyup", function () {
-        calc_orders.innerText = `${this.value} * $0.25`;
-        orders_sum.innerText = `$${(this.value * 0.25)}`;
-        sum_2 = (this.value * 0.25);
-        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-    });
-
-
-    accounting.addEventListener("click", function () {
-        if (this.checked) {
-            accounting_sum.innerText = `$35`;
-            sum_4 = 35;
-            total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-        } else {
-            accounting_sum.innerText = `$0`;
-            sum_4 = 0;
-            totalSum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-        }
-    });
-    rental.addEventListener("click", function () {
-        if (this.checked) {
-            terminal_sum.innerText = `$5`;
-            sum_5 = 5;
-            total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-        } else {
-            terminal_sum.innerText = `$0`;
-            sum_5 = 0;
-            total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-        }
-    });
-
-    //events
     choose_package.addEventListener("click", function () {
         options_visible.classList.toggle("show");
         arrow.classList.toggle("rotate");
@@ -154,7 +104,61 @@ document.addEventListener("DOMContentLoaded", function () {
         package_sum.innerText = '$60';
         sum_3 = 60;
         total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
-    })
+    });
+
+
+//calculation
+    products_quantity.addEventListener("click", function () {
+        calc_products.innerText = `${Math.abs(this.value)} * $2`;
+        products_sum.innerText = `$${Math.abs(this.value * 2)}`;
+        sum_1 = Math.abs(this.value * 2);
+        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+    });
+    products_quantity.addEventListener("keyup", function () {
+        calc_products.innerText = `${Math.abs(this.value)} * $2`;
+        products_sum.innerText = `$${Math.abs(this.value * 2)}`;
+        sum_1 = Math.abs(this.value * 2);
+        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+    });
+
+
+    estimated_orders.addEventListener("click", function () {
+        calc_orders.innerText = `${Math.abs(this.value)} * $5`;
+        orders_sum.innerText = `$${Math.abs(this.value * 5)}`;
+        sum_2 = Math.abs(this.value * 5);
+        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+    });
+    estimated_orders.addEventListener("keyup", function () {
+        calc_orders.innerText = `${Math.abs(this.value)} * $5`;
+        orders_sum.innerText = `$${Math.abs(this.value * 5)}`;
+        sum_2 = Math.abs(this.value * 5);
+        total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+    });
+
+    accounting.addEventListener("click", function () {
+        if (this.checked) {
+            accounting_sum.innerText = `$35`;
+            sum_4 = 35;
+            total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+        } else {
+            accounting_sum.innerText = `$0`;
+            sum_4 = 0;
+            totalSum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+        }
+    });
+    rental.addEventListener("click", function () {
+        if (this.checked) {
+            terminal_sum.innerText = `$5`;
+            sum_5 = 5;
+            total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+        } else {
+            terminal_sum.innerText = `$0`;
+            sum_5 = 0;
+            total_sum.innerText = `$${sum_1 + sum_2 + sum_3 + sum_4 + sum_5}`;
+        }
+    });
+
+
 
 
 });
