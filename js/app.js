@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const options_visible = document.getElementById("options_visible");
-    const arrow = document.getElementById("arrow");
     const basic = document.getElementById("basic");
     const professional = document.getElementById("professional");
     const premium = document.getElementById("premium");
@@ -25,14 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     choose_package.addEventListener("click", function () {
         options_visible.classList.toggle("show");
-        arrow.classList.toggle("rotate");
     });
+
+
     basic.addEventListener("click", function () {
         options_visible.classList.toggle("show");
-        arrow.classList.toggle("rotate");
         package_option.value = "Basic";
-        choose_package.innerText = "";
-        package_option.innerText = package_option.value;
+        package_option.innerText = "Basic";
         package_sum.innerText = '$0';
         sum_3 = 0;
         total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
@@ -40,54 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     professional.addEventListener("click", function () {
         options_visible.classList.toggle("show");
-        arrow.classList.toggle("rotate");
-        choose_package.innerText = "";
-        package_option.innerText = package_option.value;
         package_option.value = "Professional";
+        package_option.innerText = "Professional";
         package_sum.innerText = '$25';
         sum_3 = 25;
         total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
     });
     premium.addEventListener("click", function () {
         options_visible.classList.toggle("show");
-        arrow.classList.toggle("rotate");
-        choose_package.innerText = "";
-        package_option.innerText = package_option.value;
         package_option.value = "Premium";
+        package_option.innerText = "Premium";
         package_sum.innerText = '$60';
         sum_3 = 60;
         total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
     });
-
-    const btn_basic = document.getElementById("btn_basic");
-    const btn_professional = document.getElementById("btn_professional");
-    const btn_premium = document.getElementById("btn_premium");
-
-    btn_basic.addEventListener("click", function () {
-        choose_package.innerText = "";
-        package_option.innerText = package_option.value;
-        package_option.value = "Basic";
-        package_sum.innerText = '$0';
-        sum_3 = 0;
-        total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
-    });
-    btn_professional.addEventListener("click", function () {
-        package_option.value = "Professional";
-        choose_package.innerText = "";
-        package_option.innerText = package_option.value;
-        package_sum.innerText = '$25';
-        sum_3 = 25;
-        total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
-    });
-    btn_premium.addEventListener("click", function () {
-        package_option.value = "Premium";
-        choose_package.innerText = "";
-        package_option.innerText = package_option.value;
-        package_sum.innerText = '$60';
-        sum_3 = 60;
-        sum.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
-    });
-
 
 
 
@@ -102,34 +66,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const accounting_sum = document.getElementById("accounting_sum");
 
 
-
 //calculation
     products_quantity.addEventListener("click", function () {
         products.innerText = `${Math.abs(this.value)} * $2`;
-        products_sum.innerText = `$${Math.abs(this.value * 2)}`;
+        products_sum.innerText = '$' + Math.abs(this.value * 2);
         sum_1 = Math.abs(this.value * 2);
         total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
     });
-    products_quantity.addEventListener("keyup", function () {
-        products.innerText = `${Math.abs(this.value)} * $2`;
-        products_sum.innerText = `$${Math.abs(this.value * 2)}`;
-        sum_1 = Math.abs(this.value * 2);
-        total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
-    });
-
 
     estimated_orders.addEventListener("click", function () {
         orders.innerText = `${Math.abs(this.value)} * $5`;
-        orders_sum.innerText = `$${Math.abs(this.value * 5)}`;
+        orders_sum.innerText = '$' + Math.abs(this.value * 5);
         sum_2 = Math.abs(this.value * 5);
         total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
     });
-    estimated_orders.addEventListener("keyup", function () {
-        orders.innerText = `${Math.abs(this.value)} * $5`;
-        orders_sum.innerText = `$${Math.abs(this.value * 5)}`;
-        sum_2 = Math.abs(this.value * 5);
-        total.innerText = '$' + (sum_1 + sum_2 + sum_3 + sum_4 + sum_5);
-    });
+
 
     accounting.addEventListener("click", function () {
         if (this.checked) {
